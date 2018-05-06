@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import './CartItem.css'
-import CheckOutButton from './CheckOutButton'
 import PropTypes from 'prop-types'
 
 export const productShape = PropTypes.shape({

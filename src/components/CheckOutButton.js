@@ -10,7 +10,6 @@ export const buttonShape = PropTypes.shape({
   static propTypes = buttonShape.isRequired
 
   render() {
-    const { onClick } = this.props
 
     return (
       <button className="CheckOutButton" onClick={this.props.onClick}>CheckOut</button>
