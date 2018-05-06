@@ -64,7 +64,7 @@ ShoppingCartValue = () => {
       <ul>
         {this.state.products.map((product) =>
           <Products
-          id={product.id}
+          key={product.id}
           name={product.name}
           price={product.price}
           quantity={product.quantity}
