@@ -1,3 +1,12 @@
 .App {
   text-align: center;
 }
+
+.Clock {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.totalValue {
+  font-size: 40px;
+}

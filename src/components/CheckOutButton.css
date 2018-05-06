@@ -1,12 +1,12 @@
-button.CheckOut {
+button.CheckOutButton {
   flex: 1;
   border: 1px solid #ccc;
   font-size: 150%;
   margin: 12px;
   cursor: pointer;
-  max-width: 50px;
+  max-width: 150px;
 }
 
-button.CheckOut:hover {
-  background-color: #eee;
+button.CheckOutButton:hover {
+  background-color: red;
 }

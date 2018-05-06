@@ -16,5 +16,9 @@ li.Item p.name {
 }
 
 li.Item p.price {
-  max-width: 50px;
+  max-width: 200px;
+}
+
+li.Item button {
+  margin-right: 50px;
 }

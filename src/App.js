@@ -64,7 +64,7 @@ ShoppingCartValue = () => {
       <ul>
         {this.state.products.map((product) =>
           <Products
-          key={product.id}
+          id={product.id}
           name={product.name}
           price={product.price}
           quantity={product.quantity}
@@ -72,7 +72,7 @@ ShoppingCartValue = () => {
           />)}
       </ul>
       <CheckOutButton onClick={this.ShoppingCartValue} />
-      <p>{this.state.totalValue}</p>
+      <p className="totalValue">{this.state.totalValue}</p>
       </div>
     )
   }
