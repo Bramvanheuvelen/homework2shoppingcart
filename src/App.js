@@ -34,15 +34,26 @@ class App extends Component {
       products.forEach((product) => product.quantity = 0 )
     }
 
-state = { products }
+state = { products, totalValue: "Total value:" }
 
 incrementQuantity = (productId) => {
   this.setState({
     product: this.state.products.map(product => {
-      return product.id === productId ? {...product, ...product.quantity =+ 1} : product
+      if (product.id !== productId) return product
+      return {...product, ...product.quantity ++}
     })
   })
 }
+
+ShoppingCartValue = () => {
+    const cartItemsTotal = this.state.products
+      .map(product => product.quantity * product.price)
+      .reduce((accumulator, currentValue) => accumulator + currentValue) //needs reduce to give the total instead of an array of all the values
+    this.setState({
+      totalValue: "Total value:" +" "+ cartItemsTotal
+    })
+  }
+
 
   render() {
     return (
@@ -51,12 +62,17 @@ incrementQuantity = (productId) => {
       format={'h:mm'}
       ticking={true} />
       <ul>
-        {this.state.products.map((product) => <Products key={product.id} name={product.name}
-              price={product.price}
-              onPlusClick={() => this.incrementQuantity(product.id)}
-              quantity={product.quantity} />)}
+        {this.state.products.map((product) =>
+          <Products
+          key={product.id}
+          name={product.name}
+          price={product.price}
+          quantity={product.quantity}
+          onPlusClick={() => this.incrementQuantity(product.id)}
+          />)}
       </ul>
-      <CheckOutButton />
+      <CheckOutButton onClick={this.ShoppingCartValue} />
+      <p>{this.state.totalValue}</p>
       </div>
     )
   }
