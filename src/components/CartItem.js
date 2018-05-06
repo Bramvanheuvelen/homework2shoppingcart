@@ -20,8 +20,8 @@ export default class Products extends PureComponent {
     return (
       <li className="Item">
         <p className="name">{name}</p>
-        <p className="price">{price}</p>
-        <p className="quantity">{quantity}</p>
+        <p className="price">Price: {price}</p>
+        <p className="quantity">Quantity: {quantity}</p>
         <button onClick={onPlusClick}>+</button>
       </li>
     )

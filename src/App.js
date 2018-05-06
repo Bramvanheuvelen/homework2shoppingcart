@@ -58,7 +58,7 @@ ShoppingCartValue = () => {
   render() {
     return (
       <div className="App">
-      <Clock
+      <Clock className="Clock"
       format={'h:mm'}
       ticking={true} />
       <ul>
