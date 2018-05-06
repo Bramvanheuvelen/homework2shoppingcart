@@ -9,7 +9,7 @@ export default class CheckOutButton extends PureComponent {
 
   render() {
     return (
-      <button className="CheckOut" onClick={this.props.onClick}>CheckOut</button>
+      <button className="CheckOutButton" onClick={this.props.onClick}>CheckOut</button>
     )
   }
 }
